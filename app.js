@@ -34,8 +34,14 @@ app.put('/v1/explorers/:id', (req, res) =>{
     console.log(`Api Explorers PUT request ${new Date()}`)
     console.log(`Update explorer with id: ${req.params.id}`)
     const requestBody = req.body // Parametros de un cliente
-    res.status(200).json({message: "Updated!"}) 
-    
+    res.status(200).json({message: "Updated!"})    
+})
+
+app.delete('/v1/explorers/:id', (req, res) => {
+    console.log(`Api Explorers DELETE request ${ new Date()}`)
+    console.log(`DELETE Explorer with id ${req.params.id}`)
+    const requestBody = req.body // Parametros de un cliente
+    res.status(200).json({message: "Deleted"})
 })
 
 
